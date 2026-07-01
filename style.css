@@ -1,0 +1,1459 @@
+/* =========================
+   Google Font
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+--bg1:#ffd6e7;
+--bg2:#ffeef7;
+--glass:rgba(255,255,255,.28);
+--border:rgba(255,255,255,.4);
+
+--text:#444;
+--pink:#ff4d8d;
+--shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+body.dark{
+
+--bg1:#131420;
+--bg2:#202337;
+--glass:rgba(255,255,255,.08);
+--border:rgba(255,255,255,.12);
+
+--text:#ffffff;
+--pink:#ff82c3;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+background:linear-gradient(-45deg,
+var(--bg1),
+#ffddee,
+#ffe8f4,
+var(--bg2));
+
+background-size:400% 400%;
+
+animation:bgMove 15s ease infinite;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:var(--text);
+
+transition:.5s;
+
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+/*========================*/
+
+.container{
+
+width:95%;
+
+max-width:900px;
+
+padding:30px;
+
+text-align:center;
+
+position:relative;
+
+z-index:10;
+
+}
+
+/*========================*/
+
+.title{
+
+font-family:'Dancing Script',cursive;
+
+font-size:65px;
+
+color:var(--pink);
+
+margin-bottom:10px;
+
+animation:heartbeat 2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%{transform:scale(1);}
+
+25%{transform:scale(1.05);}
+
+50%{transform:scale(.95);}
+
+75%{transform:scale(1.08);}
+
+100%{transform:scale(1);}
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+margin-bottom:40px;
+
+opacity:.8;
+
+}
+
+/*========================*/
+
+.card{
+
+background:var(--glass);
+
+backdrop-filter:blur(20px);
+
+border:1px solid var(--border);
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+transition:.5s;
+
+animation:fadeUp 1s;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*========================*/
+
+#compliment{
+
+margin:35px auto;
+
+font-size:28px;
+
+font-weight:600;
+
+color:var(--pink);
+
+min-height:110px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+transition:.4s;
+
+}
+
+/*========================*/
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:17px;
+
+font-weight:600;
+
+background:linear-gradient(45deg,#ff4d8d,#ff77b4);
+
+color:white;
+
+transition:.35s;
+
+margin:10px;
+
+box-shadow:0 10px 20px rgba(255,0,100,.2);
+
+}
+
+button:hover{
+
+transform:translateY(-5px) scale(1.05);
+
+box-shadow:0 15px 35px rgba(255,0,120,.4);
+
+}
+
+/*========================*/
+
+.theme-btn{
+
+position:fixed;
+
+right:25px;
+
+top:25px;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+font-size:24px;
+
+z-index:100;
+
+}
+
+/*========================*/
+
+.gift-box{
+
+width:170px;
+
+height:170px;
+
+margin:40px auto;
+
+position:relative;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+.box{
+
+position:absolute;
+
+bottom:0;
+
+width:170px;
+
+height:110px;
+
+background:#ff5f99;
+
+border-radius:10px;
+
+}
+
+.lid{
+
+position:absolute;
+
+top:20px;
+
+width:170px;
+
+height:40px;
+
+background:#ff78aa;
+
+border-radius:8px;
+
+transition:.8s;
+
+transform-origin:left;
+
+z-index:5;
+
+}
+
+.gift-box.open .lid{
+
+transform:rotate(-35deg) translateY(-25px);
+
+}
+
+.ribbon-v{
+
+position:absolute;
+
+left:77px;
+
+width:16px;
+
+height:170px;
+
+background:white;
+
+z-index:3;
+
+}
+
+.ribbon-h{
+
+position:absolute;
+
+top:55px;
+
+width:170px;
+
+height:16px;
+
+background:white;
+
+z-index:3;
+
+}
+
+/*========================*/
+
+.tap{
+
+font-size:18px;
+
+margin-top:-20px;
+
+color:var(--pink);
+
+animation:blink 1.5s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.3;
+
+}
+
+}
+
+/*========================*/
+
+.letter{
+
+margin-top:40px;
+
+padding:25px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.18);
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+/*========================*/
+
+.gallery{
+
+margin-top:35px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:180px;
+
+border-radius:18px;
+
+object-fit:cover;
+
+transition:.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+/* ===== Mobile Fix ===== */
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:100%;
+    padding:20px;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.card{
+    width:100%;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.title{
+    font-size:2rem;
+    line-height:1.2;
+}
+
+.subtitle{
+    font-size:1rem;
+}
+
+#compliment{
+    font-size:1.2rem;
+    min-height:auto;
+}
+
+.gift-box{
+    transform:scale(.7);
+    margin:20px auto;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+button{
+    width:100%;
+    font-size:16px;
+    padding:15px;
+}
+
+.letter{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.theme-btn{
+    width:45px;
+    height:45px;
+    top:15px;
+    right:15px;
+}
+
+.ending-message h2{
+    font-size:30px;
+}
+
+.ending-message p{
+    font-size:16px;
+}
+
+}
+
+/*========================*/
+
+.buttons{
+
+margin-top:35px;
+
+}
+/* ===========================================
+   BLOOMING FLOWERS
+=========================================== */
+
+.flowers{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.flower{
+    position:absolute;
+    width:55px;
+    height:55px;
+    opacity:0;
+    transform:scale(0);
+    animation:bloom 2s ease forwards,
+              sway 4s ease-in-out infinite;
+}
+
+.flower::before{
+    content:"🌸";
+    font-size:48px;
+}
+
+@keyframes bloom{
+
+0%{
+opacity:0;
+transform:scale(0) rotate(-180deg);
+}
+
+60%{
+opacity:1;
+transform:scale(1.2) rotate(20deg);
+}
+
+100%{
+opacity:.9;
+transform:scale(1);
+}
+
+}
+
+@keyframes sway{
+
+0%{
+transform:translateY(0px) rotate(-5deg);
+}
+
+50%{
+transform:translateY(-8px) rotate(5deg);
+}
+
+100%{
+transform:translateY(0px) rotate(-5deg);
+}
+
+}
+
+/* ===========================================
+   FLOWER PETALS
+=========================================== */
+
+.petals{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:2;
+
+}
+
+.petal{
+
+position:absolute;
+
+top:-50px;
+
+font-size:24px;
+
+animation:petalFall linear infinite;
+
+opacity:.9;
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(-100px)
+rotate(0deg);
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+translateX(100px)
+rotate(360deg);
+
+opacity:.3;
+
+}
+
+}
+
+/* ===========================================
+   HEART RAIN
+=========================================== */
+
+.hearts{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:3;
+
+}
+
+.heart{
+
+position:absolute;
+
+top:-40px;
+
+font-size:24px;
+
+animation:heartFall linear infinite;
+
+}
+
+@keyframes heartFall{
+
+0%{
+
+transform:
+translateY(-50px)
+scale(.5);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+translateX(80px)
+scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================================
+   FLOATING HEART BURST
+=========================================== */
+
+.float-heart{
+
+position:fixed;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:floatHeart 2s ease forwards;
+
+z-index:1000;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(.5);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-220px)
+scale(2);
+
+}
+
+}
+
+/* ===========================================
+   GLOW EFFECTS
+=========================================== */
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:-150%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:skewX(-25deg);
+
+animation:shine 6s infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-150%;
+
+}
+
+100%{
+
+left:180%;
+
+}
+
+}
+
+/* ===========================================
+   BUTTON GLOW
+=========================================== */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+button::after{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+rgba(255,255,255,.25);
+
+transform:skewX(-30deg);
+
+transition:.5s;
+
+}
+
+button:hover::after{
+
+left:150%;
+
+}
+
+/* ===========================================
+   IMAGE GLOW
+=========================================== */
+
+.gallery img{
+
+box-shadow:
+
+0 15px 35px
+
+rgba(255,120,180,.25);
+
+}
+
+.gallery img:hover{
+
+box-shadow:
+
+0 20px 45px
+
+rgba(255,60,130,.5);
+
+}
+
+/* ===========================================
+   TITLE GLOW
+=========================================== */
+
+.title{
+
+text-shadow:
+
+0 0 10px #ff95bf,
+
+0 0 20px #ff7bb0,
+
+0 0 35px #ff4d8d;
+
+}
+
+/* ===========================================
+   MUSIC PULSE
+=========================================== */
+
+.music-playing .title{
+
+animation:
+
+heartbeat 1.4s infinite,
+
+glowPulse 2s infinite;
+
+}
+
+@keyframes glowPulse{
+
+0%{
+
+filter:drop-shadow(0 0 5px #ff75b0);
+
+}
+
+50%{
+
+filter:drop-shadow(0 0 25px #ff4d8d);
+
+}
+
+100%{
+
+filter:drop-shadow(0 0 5px #ff75b0);
+
+}
+
+}
+
+/* ===========================================
+   CONFETTI CANVAS
+=========================================== */
+
+#confetti{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:999;
+
+}
+
+/* ===========================================
+   CARD APPEAR
+=========================================== */
+
+.show{
+
+animation:
+
+cardShow .8s ease;
+
+}
+
+@keyframes cardShow{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(60px)
+
+scale(.9);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+
+@media (max-width:992px){
+
+.container{
+    width:95%;
+    padding:25px;
+}
+
+.title{
+    font-size:50px;
+}
+
+#compliment{
+    font-size:24px;
+}
+
+.card{
+    padding:30px;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+.title{
+    font-size:42px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.gallery img{
+    height:220px;
+}
+
+.gift-box{
+    transform:scale(.9);
+}
+
+button{
+    width:100%;
+    margin:8px 0;
+}
+
+.letter{
+    font-size:16px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+.container{
+    padding:15px;
+}
+
+.title{
+    font-size:34px;
+}
+
+.subtitle{
+    font-size:15px;
+}
+
+.card{
+    padding:20px;
+}
+
+#compliment{
+    font-size:20px;
+    min-height:90px;
+}
+
+.gift-box{
+    transform:scale(.75);
+}
+
+.gallery img{
+    height:170px;
+}
+
+.theme-btn{
+    width:45px;
+    height:45px;
+    font-size:20px;
+    right:15px;
+    top:15px;
+}
+
+button{
+    font-size:15px;
+    padding:14px;
+}
+
+}
+
+/* ===========================================
+   DARK MODE
+=========================================== */
+
+body.dark{
+
+background:
+linear-gradient(
+135deg,
+#111827,
+#1f2937,
+#111827);
+
+color:white;
+
+}
+
+body.dark .card{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+body.dark .letter{
+
+background:rgba(255,255,255,.05);
+
+}
+
+body.dark .gallery img{
+
+box-shadow:
+0 15px 40px
+rgba(255,255,255,.08);
+
+}
+
+body.dark button{
+
+background:
+linear-gradient(
+45deg,
+#ff4d8d,
+#d946ef);
+
+}
+
+/* ===========================================
+   SPARKLE STARS
+=========================================== */
+
+.sparkle{
+
+position:fixed;
+
+font-size:16px;
+
+pointer-events:none;
+
+animation:sparkleAnim 900ms linear forwards;
+
+z-index:9999;
+
+}
+
+@keyframes sparkleAnim{
+
+0%{
+
+opacity:1;
+
+transform:
+scale(.4)
+rotate(0deg);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-60px)
+scale(2)
+rotate(180deg);
+
+}
+
+}
+
+/* ===========================================
+   SHARE BUTTON
+=========================================== */
+
+#shareBtn{
+
+background:
+linear-gradient(
+45deg,
+#3b82f6,
+#60a5fa);
+
+}
+
+#shareBtn:hover{
+
+box-shadow:
+0 10px 35px
+rgba(59,130,246,.4);
+
+}
+
+/* ===========================================
+   HEART BUTTON
+=========================================== */
+
+#heartBtn{
+
+background:
+linear-gradient(
+45deg,
+#ff4d8d,
+#ff8fab);
+
+}
+
+/* ===========================================
+   COMPLIMENT ANIMATION
+=========================================== */
+
+.fade{
+
+animation:fadeText .7s;
+
+}
+
+@keyframes fadeText{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff78b0;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ffeef5;
+
+}
+
+/* ===========================================
+   SELECTION
+=========================================== */
+
+::selection{
+
+background:#ff6ea8;
+
+color:white;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.footer{
+
+margin-top:35px;
+
+font-size:14px;
+
+opacity:.7;
+
+}
+
+/* ===========================================
+   SMOOTH TRANSITIONS
+=========================================== */
+
+*{
+
+transition:
+background .3s,
+color .3s,
+transform .3s;
+
+}
+.divider{
+
+margin:40px 0;
+
+border:none;
+
+height:1px;
+
+background:rgba(255,255,255,.3);
+
+}
+
+.ending-message{
+
+margin-top:40px;
+
+padding:30px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+animation:fadeUp 2s ease;
+
+}
+
+.ending-message h2{
+
+color:#ff4d8d;
+
+margin-bottom:20px;
+
+font-family:'Dancing Script',cursive;
+
+font-size:38px;
+
+}
+
+.ending-message p{
+
+font-size:18px;
+
+line-height:2;
+
+white-space:pre-line;
+
+color:var(--text);
+
+}
+.ending-message{
+
+display:none;
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.ending-message.show{
+
+display:block;
+
+animation:endingAnimation 1.5s forwards;
+
+}
+
+@keyframes endingAnimation{
+
+0%{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+@media (max-width:768px){
+
+button{
+    width:100%;
+    margin:10px 0;
+}
+
+}
+@media (max-width:768px){
+
+.title{
+
+font-size:38px;
+
+}
+
+}
+@media (max-width:768px){
+
+#compliment{
+
+font-size:22px;
+line-height:1.6;
+
+}
+
+}
+@media (max-width:768px){
+
+.gallery img{
+
+height:180px;
+
+}
+
+}
+@media (max-width:768px){
+
+.gift-box{
+
+transform:scale(.8);
+
+}
+
+}
+@media (max-width:768px){
+
+.container{
+
+padding:20px;
+
+}
+
+}
+
